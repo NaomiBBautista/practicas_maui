@@ -89,4 +89,4 @@ Creación de una aplicación multiplataforma que muestre imágenes y frases rand
 * **FUNCIONALIDAD**: Contendrá un `Button` que cambiara aleatoriamente el fondo degradado, la imagen y la frase.
 
 #####  Página Principal: 
-![Calculo IVA](imagenes/random1.png)  ![Calculo IVA](imagenes/random2.png) 
+![Calculo IVA](imagenes/random1.png)        ![Calculo IVA](imagenes/random2.png) 
