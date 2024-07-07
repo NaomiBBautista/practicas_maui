@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_1P_EX.MainPage"
+             Title="Exámen 1 Parcial"
+             BarBackgroundColor="#0c0a20"
+             BarTextColor="White"
+             UnselectedTabColor="#ff2e97"
+             SelectedTabColor="#ff2e97">
+
+    <!-- PÁGINA BIENVENIDA -->
+    <ContentPage Title="INICIO" 
+        IconImageSource="home.png"
+        BackgroundColor="#0c0a20">
+        <ScrollView>
+            <VerticalStackLayout>
+                <Label Text="¡BIENVENIDO!"
+                    Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1"
+                    FontAttributes="Bold" FontSize="Large" TextColor="White"
+                    HorizontalOptions="Center" VerticalOptions="Start" Padding="40"/>
+                <Image Source="imagen0.png"
+                    WidthRequest="500" HeightRequest="300" Aspect="AspectFill"
+                    HorizontalOptions="Center" VerticalOptions="Center"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <!-- PÁGINA WATTS -->
+    <ContentPage Title="WATTS" 
+        IconImageSource="energia1.png"
+        BackgroundColor="#0c0a20">
+        <ScrollView >
+            <VerticalStackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/><RowDefinition/><RowDefinition/><RowDefinition/><RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/><ColumnDefinition/><ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <!-- <BoxView Grid.Row="0" Grid.ColumnSpan="3" Color="#FFA33C" Margin="10"/> -->
+                    <Label Text="----- WATTS -----"
+                        Grid.Row="0" Grid.ColumnSpan="3"
+                        Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1"
+                        FontAttributes="Bold" FontSize="Large" TextColor="White"
+                        HorizontalOptions="Center" VerticalOptions="Center" Padding="20"/>
+                    <Label Text="Ingrese la cantidad de amperios (A):"
+                        Grid.Row="1" Grid.Column="0"
+                        VerticalOptions="Center" HorizontalOptions="Center" 
+                        FontAttributes="Bold" FontSize="Medium" TextColor="White"/>
+                    <Entry x:Name="ampers"
+                        Grid.Row="1" Grid.Column="1"
+                        VerticalOptions="Center" HorizontalOptions="Center"
+                        FontSize="Medium" TextColor="White" BackgroundColor="#7984d1"
+                        WidthRequest="300" Margin="20"/>
+                    <Label Text="Ingrese la cantidad de voltios (V):"
+                        Grid.Row="2" Grid.Column="0"
+                        VerticalOptions="Center" HorizontalOptions="Center" 
+                        FontSize="Medium" TextColor="White"/>
+                    <Entry x:Name="voltios"
+                        Grid.Row="2" Grid.Column="1"
+                        VerticalOptions="Center" HorizontalOptions="Center"
+                        FontAttributes="Bold" FontSize="Medium" TextColor="White" BackgroundColor="#7984d1"
+                        WidthRequest="300" Margin="20"/>
+                    <Image Source="imagen1.png"
+                        Grid.Row="1" Grid.RowSpan="2" Grid.Column="2"
+                        HorizontalOptions="Center" VerticalOptions="Center" Margin="20"/>
+                    <Button x:Name="btnWatts" Text="CALCULAR" 
+                        Grid.Row="3" Grid.ColumnSpan="3"
+                        Clicked="calcularWatts"
+                        Margin="50" BackgroundColor="#FFA33C" FontAttributes="Bold" TextColor="White" FontSize="Medium"/>
+                    <Label x:Name="resulWatts" 
+                        Grid.Row="4" Grid.ColumnSpan="3"
+                        FontAttributes="Bold" FontSize="Medium" TextColor="White"
+                        VerticalOptions="Start" HorizontalOptions="Center"/>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <!-- PÁGINA JOULES -->
+    <ContentPage Title="JOULES" 
+        IconImageSource="energia2.png"
+        BackgroundColor="#0c0a20">
+        <ScrollView >
+            <VerticalStackLayout>
+                    <HorizontalStackLayout>
+                        <Image Source="imagen2.png"
+                            HorizontalOptions="End" VerticalOptions="Center" Margin="40" WidthRequest="250" HeightRequest="250"/>
+                        <!-- <BoxView  Color="#42c6ff" Margin="10" VerticalOptions="Start" HorizontalOptions="Fill"/> -->
+                        <Label Text="       ----- JOULES -----"
+                            Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1"
+                            FontAttributes="Bold" FontSize="Large" TextColor="White"
+                            HorizontalOptions="Center" VerticalOptions="Center" Margin="40"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout
+                         Margin="10">
+                            <Label Text="Ingrese  la  cantidad  de  joules (J):"
+                                VerticalOptions="Center" HorizontalOptions="Center" 
+                                FontAttributes="Bold" FontSize="Medium" TextColor="White" Padding="20"/>
+                            <Entry x:Name="joules"
+                                VerticalOptions="Center" HorizontalOptions="Center"
+                                FontAttributes="Bold" FontSize="Medium" TextColor="White" BackgroundColor="#7984d1"
+                                WidthRequest="500" Margin="20"/>      
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout
+                    Margin="10">
+                        <Label Text="Ingrese la cantidad de segundos (S):"
+                            VerticalOptions="Center" HorizontalOptions="End" 
+                            FontAttributes="Bold" FontSize="Medium" TextColor="White" Padding="20"/>
+                        <Entry x:Name="segundos"
+                            VerticalOptions="Center" HorizontalOptions="Center"
+                            FontAttributes="Bold" FontSize="Medium" TextColor="White" BackgroundColor="#7984d1"
+                            WidthRequest="500" Margin="20"/>
+                    </HorizontalStackLayout>
+
+                    <Button x:Name="btnJoules" Text="CALCULAR" 
+                        Clicked="calcularJoules"
+                        Margin="20" BackgroundColor="#42c6ff" FontAttributes="Bold" TextColor="White" FontSize="Medium"/>
+                    <Label x:Name="resulJoules"
+                        FontAttributes="Bold" FontSize="Medium" TextColor="White"
+                        VerticalOptions="Center" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
+</TabbedPage>
