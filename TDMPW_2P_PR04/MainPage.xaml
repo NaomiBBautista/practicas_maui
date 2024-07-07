@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_2P_PR04.MainPage"
+             Title="TDMPW_2P_PR04"
+             BarBackgroundColor="#f7f2f8"
+             BarTextColor="#02234c"
+             UnselectedTabColor="#ff4121"
+             SelectedTabColor="#ff4121">
+    <!-- Colores
+        Blanco: #f7f2f8
+        Naranja: #ff4121
+        Amarillo: #ff9a0a 
+        Rojo: #922d3b
+        Azul Claro: #17b3d9
+        Azul Fuerte: #02234c
+        Cambiar NavigationPage, Page-->
+
+    <ContentPage Title="INICIO" 
+        IconImageSource="inicio.png" 
+        BackgroundColor="#f7f2f8">
+        <ScrollView>
+            <VerticalStackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/> 
+                        <RowDefinition/> 
+                        <RowDefinition/> 
+                        <RowDefinition/> 
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/> 
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label 
+                        Grid.Row="0" Grid.Column="0" 
+                        Text="Ingrese el monto: " 
+                        TextColor="#ff4121" 
+                        FontAttributes="Bold" 
+                        FontFamily="Student" 
+                        FontSize="35" 
+                        Margin="20,30,20,0" 
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center"/>
+
+                    <Entry 
+                        x:Name="txtTotal" 
+                        Grid.Row="0" Grid.Column="1" 
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"
+                        FontAttributes="Bold" 
+                        FontSize="Medium" 
+                        TextColor="White" 
+                        BackgroundColor="#02234c" 
+                        Margin="20,30,20,0"
+                        WidthRequest="350" 
+                        Placeholder="  0.00" 
+                        TextChanged="asignarMonto"/> 
+                    
+                    <Frame 
+                        Grid.Row="1" 
+                        Grid.RowSpan="2" Grid.ColumnSpan="2" 
+                        BorderColor="#17b3d9" 
+                        CornerRadius="50" 
+                        BackgroundColor="#17b3d9" 
+                        Margin="40">
+
+                        <StackLayout>
+
+                            <Label 
+                                x:Name="txtMonto" 
+                                Text="$  0.00" 
+                                TextColor="#f7f2f8" 
+                                FontAttributes="Bold" 
+                                FontFamily="Student" 
+                                FontSize="80" 
+                                Style="{StaticResource Headline}" 
+                                SemanticProperties.HeadingLevel="Level1"
+                                Padding="10" 
+                                HorizontalOptions="Center" 
+                                VerticalOptions="Start" 
+                                Margin="20,30,20,0"/>
+
+                            <BoxView 
+                                HeightRequest="3" 
+                                HorizontalOptions="Fill" 
+                                VerticalOptions="Start" 
+                                Color="#f7f2f8" 
+                                Margin="20, 0,20,0"/>
+
+                            <HorizontalStackLayout>
+                                <VerticalStackLayout Padding="20,30,20,20" WidthRequest="250">
+
+                                    <Label 
+                                        Text="Envio" 
+                                        TextColor="#f7f2f8" 
+                                        FontAttributes="Bold" 
+                                        FontFamily="Student" 
+                                        FontSize="30" 
+                                        VerticalOptions="Center" 
+                                        HorizontalOptions="Center"/>
+
+                                    <Label 
+                                        x:Name="txtEnvio" 
+                                        Text="$  0.00" 
+                                        TextColor="#f7f2f8" 
+                                        FontAttributes="Bold" 
+                                        FontFamily="Student" 
+                                        FontSize="30" 
+                                        VerticalOptions="End" 
+                                        HorizontalOptions="Center"/>
+
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout Padding="20,30,0,20" WidthRequest="250">
+
+                                    <Label  
+                                        Text="IVA   " 
+                                        TextColor="#f7f2f8" 
+                                        FontAttributes="Bold" 
+                                        FontFamily="Student" 
+                                        FontSize="30" 
+                                        VerticalOptions="Center" 
+                                        HorizontalOptions="End"/>
+
+                                    <Label 
+                                        x:Name="txtIVA" 
+                                        Text="$  0.00" 
+                                        TextColor="#f7f2f8" 
+                                        FontAttributes="Bold" 
+                                        FontFamily="Student" 
+                                        FontSize="30" 
+                                        VerticalOptions="End" 
+                                        HorizontalOptions="End"/>
+
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <HorizontalStackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="10">
+
+                        <Label 
+                            Text="Seleccione el IVA: " 
+                            TextColor="#ff4121" 
+                            FontAttributes="Bold" 
+                            FontFamily="Student" 
+                            FontSize="35" 
+                            Padding="40" 
+                            Margin="50,0,20,0"
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Center"
+                            WidthRequest="300"/>
+
+                        <Button 
+                            x:Name="iva0" 
+                            Text=" 0%" 
+                            Clicked="agregarIVA0" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Center" 
+                            Padding="10,20,0,0"
+                            Margin="10,0" 
+                            BackgroundColor="#02234c" 
+                            TextColor="#f7f2f8" 
+                            FontSize="30" 
+                            FontFamily="Student" 
+                            FontAttributes="Bold"
+                            WidthRequest="100" 
+                            HeightRequest="100"/>
+
+                        <Button 
+                            x:Name="iva11" 
+                            Text="11%" 
+                            Clicked="agregarIVA11" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Center" 
+                            Padding="10,20,0,0"
+                            Margin="10,0" 
+                            BackgroundColor="#02234c" 
+                            TextColor="#f7f2f8" 
+                            FontSize="30" 
+                            FontFamily="Student" 
+                            FontAttributes="Bold"
+                            WidthRequest="100" 
+                            HeightRequest="100"/>
+
+                        <Button 
+                            x:Name="iva16" 
+                            Text="16%" 
+                            Clicked="agregarIVA16" 
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Center" 
+                            Padding="10,20,0,0"
+                            Margin="10,0" 
+                            BackgroundColor="#02234c" 
+                            TextColor="#f7f2f8" 
+                            FontSize="30" 
+                            FontFamily="Student" 
+                            FontAttributes="Bold"
+                            WidthRequest="100" 
+                            HeightRequest="100"/>
+                    </HorizontalStackLayout>
+
+                    <Slider 
+                        Grid.Row="4" Grid.ColumnSpan="2" 
+                        x:Name="sldIvar"
+                        Minimum="0" 
+                        Maximum="16" 
+                        Value="0"
+                        WidthRequest="600" 
+                        HeightRequest="50"
+                        VerticalOptions="Center" 
+                        IsEnabled="False"
+                        ThumbColor="#17b3d9" 
+                        MinimumTrackColor="#17b3d9" 
+                        MaximumTrackColor="#02234c"
+                        Margin="0,30"/>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
+</TabbedPage>
