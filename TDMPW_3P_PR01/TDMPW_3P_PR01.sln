@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDMPW_3P_PR01", "TDMPW_3P_PR01.csproj", "{94FC64F2-6D3C-4146-AD6A-E156A0B86067}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94FC64F2-6D3C-4146-AD6A-E156A0B86067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94FC64F2-6D3C-4146-AD6A-E156A0B86067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94FC64F2-6D3C-4146-AD6A-E156A0B86067}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{94FC64F2-6D3C-4146-AD6A-E156A0B86067}.Debug|x64.Build.0 = Debug|Any CPU
+		{94FC64F2-6D3C-4146-AD6A-E156A0B86067}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{94FC64F2-6D3C-4146-AD6A-E156A0B86067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94FC64F2-6D3C-4146-AD6A-E156A0B86067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94FC64F2-6D3C-4146-AD6A-E156A0B86067}.Release|x64.ActiveCfg = Release|x64
+		{94FC64F2-6D3C-4146-AD6A-E156A0B86067}.Release|x64.Build.0 = Release|x64
+		{94FC64F2-6D3C-4146-AD6A-E156A0B86067}.Release|x64.Deploy.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7AE5ECE-A624-4252-8116-C19CE0E11014}
+	EndGlobalSection
+EndGlobal
