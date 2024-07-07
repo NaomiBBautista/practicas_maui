@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_2P_PR02.DolarPage"
+             Title="DolarPage"
+             BackgroundColor="#0c0a20">
+    <ScrollView >
+            <VerticalStackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/><RowDefinition/><RowDefinition/><RowDefinition/><RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/><ColumnDefinition/><ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Row="0" Grid.ColumnSpan="3" Color="#83206f" Margin="10"/>
+                    <Label Text="----- DOLAR -----"
+                        Grid.Row="0" Grid.ColumnSpan="3"
+                        Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1"
+                        FontAttributes="Bold" FontSize="Large" TextColor="White"
+                        HorizontalOptions="Center" VerticalOptions="Center" Padding="20"/>
+                    <Label Text="Ingrese la cantidad en pesos:"
+                        Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+                        VerticalOptions="Center" HorizontalOptions="Center" 
+                        FontAttributes="Bold" FontSize="Medium" TextColor="White"/>
+                    <Entry x:Name="txtDolar"
+                        Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+                        VerticalOptions="Center" HorizontalOptions="Center"
+                        FontAttributes="Bold" FontSize="Medium" TextColor="White" BackgroundColor="#f8bbfd"
+                        WidthRequest="500" Margin="20"/>
+                    <Image Source="imagen1.png"
+                        Grid.Row="1" Grid.RowSpan="2" Grid.Column="0"
+                        HorizontalOptions="Center" VerticalOptions="Center" Margin="20"/>
+                    <Button x:Name="btnDolar" Text="CONVERTIR" 
+                        Grid.Row="3" Grid.ColumnSpan="3"
+                        Clicked="calcularDolar"
+                        Margin="50" BackgroundColor="#83206f" FontAttributes="Bold" TextColor="White" FontSize="Medium"/>
+                    <Label x:Name="txtResultadoDolar" 
+                        Grid.Row="4" Grid.ColumnSpan="3"
+                        FontAttributes="Bold" FontSize="Medium" TextColor="White"
+                        VerticalOptions="Start" HorizontalOptions="Center"/>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+</ContentPage>

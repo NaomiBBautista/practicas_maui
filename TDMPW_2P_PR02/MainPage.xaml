@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_2P_PR02.MainPage"
+             BackgroundColor="#0c0a20">
+
+    <ScrollView>
+            <VerticalStackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/> <RowDefinition/> <RowDefinition/> <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/> <ColumnDefinition/> <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Row="0" Grid.ColumnSpan="3" Color="#42a5f5" Margin="10"/>
+                    <Label Text="CÁLCULO DE MONEDA"
+                        Grid.Row="0" Grid.ColumnSpan="3"
+                        Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1"
+                        FontAttributes="Bold" FontSize="Large" TextColor="White"
+                        HorizontalOptions="Center" VerticalOptions="Center" Padding="20"/>
+                    <Label Text="¡BIENVENIDO!"
+                        Grid.Row="1" Grid.ColumnSpan="3"
+                        VerticalOptions="Center" HorizontalOptions="Center"
+                        TextColor="White" FontSize="Large" FontAttributes="Bold" Margin="30"/>
+                    <Image Source="imagen0.png"
+                        Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="3"
+                        WidthRequest="500" HeightRequest="300" Aspect="AspectFill"
+                        HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Grid>
+            </VerticalStackLayout>
+        </ScrollView>
+
+</ContentPage>
