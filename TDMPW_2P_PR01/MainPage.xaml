@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_2P_PR01.MainPage"
+             Title="Práctica 01"
+             BarBackgroundColor="#Black"
+             BarTextColor="White"
+             UnselectedTabColor="#eb7134"
+             SelectedTabColor="#eb7134">
+
+    <!-- PÁGINA BIENVENIDA -->
+    <ContentPage Title="INICIO" IconImageSource="inicio.png" BackgroundColor="Black">
+        <VerticalStackLayout>
+            <Frame BorderColor="#e83414" CornerRadius="50" Margin="50" BackgroundColor="Black" VerticalOptions="Fill">
+                <StackLayout>
+                    <Frame Margin="10" BorderColor="Black" CornerRadius="300" BackgroundColor="#b34222"
+                        HeightRequest="300" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Center" 
+                        IsClippedToBounds="True">
+                        <Image Source="libro.png" Aspect="Fill" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Frame>
+                    <Label Text="Tardes de Otoño" Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1"
+                        FontAttributes="Bold" FontSize="50" TextColor="White" Margin="0,10"
+                        VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <BoxView Color="#e83414" HeightRequest="2" HorizontalOptions="Fill"/>
+                    <Label Text="Esta historia de la autora Joana Marcús trata sobre la relación amorosa que progresivamente se va construyendo entre Amara y Aiden, ambos por amor se ayudan y apoyan para conseguir sus objetivos, metas y superar sus problemas, además aborda temas como el amor propio, problemas mentales y abuso sexual."
+                        TextColor="White" Margin="0,10" Padding="40" HorizontalOptions="Center"/>
+                    <Label Text="-Ninguna grieta es tan grande como para no ser curada. -" TextColor="White" FontAttributes="Bold" 
+                        HorizontalOptions="End" Margin="20,10"/>
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ContentPage>
+
+    <!-- PÁGINA PERSONAJE MARA-->
+    <ContentPage Title="MARA" IconImageSource="hoja.png" BackgroundColor="Black">
+        <StackLayout>
+            <Frame BorderColor="#eb7134" CornerRadius="50" Margin="50" BackgroundColor="Black" VerticalOptions="Fill">
+                <VerticalStackLayout>
+                    <HorizontalStackLayout>
+                        <Frame Margin="10" BorderColor="Black" CornerRadius="200" BackgroundColor="#eb7134" 
+                            HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" IsClippedToBounds="True">
+                            <Image Source="mara.png" Aspect="Fill" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Frame>
+                        <VerticalStackLayout Margin="30" VerticalOptions="Center" HorizontalOptions="Center">
+                            <Label  Text="Amara Dawson" Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1"
+                                FontAttributes="Bold" FontSize="40" TextColor="White" Margin="0,10"
+                                VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <BoxView Color="#eb7134" HeightRequest="2" HorizontalOptions="Fill"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                    <Label Text="Mara es una chica que trabaja en una cafetería y le encanta escribir, es una persona insegura, de carácter fuerte y personalidad marcada, que no se valora, por desgracia fue abusada sexualmente, a medida como avanza la trama se ve como se siente ella y todos los problemas que le conlleva."
+                        TextColor="White" Margin="0,10" Padding="40" HorizontalOptions="Center"/>
+                    <Label  Text="-Solo cuando estás perdida puedes encontrarte. -" TextColor="White" FontAttributes="Bold"
+                        HorizontalOptions="End" Margin="20,10"/>
+                </VerticalStackLayout>
+            </Frame>
+            <HorizontalStackLayout Margin="50,0">
+                <ImageButton Source="gusto.png" Clicked="meGusta" BorderColor="#e83414" BackgroundColor="Black"
+                    HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" HeightRequest="100" Margin="20,10,0,10"/>
+                <ImageButton Source="disgusto.png" Clicked="noGusta" BorderColor="#e83414" BackgroundColor="Black"
+                    WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" VerticalOptions="Center" Margin="20,10"/>
+                <Label Text="  Te gustó este personaje?" x:Name="txtOpinion" TextColor="White" FontAttributes="Bold" FontSize="20"
+                    HorizontalOptions="End" VerticalOptions="Center" Margin="20,10" />
+            </HorizontalStackLayout>
+        </StackLayout>
+    </ContentPage>
+
+    <!-- PÁGINA PERSONAJE AIDEN-->
+    <ContentPage Title="AIDEN" IconImageSource="guantes.png" BackgroundColor="Black">
+        <StackLayout>
+            <Frame BorderColor="#ffb74a" CornerRadius="50" Margin="50" BackgroundColor="Black" VerticalOptions="Fill">
+                <VerticalStackLayout>
+                    <HorizontalStackLayout>
+                        <VerticalStackLayout Margin="30" VerticalOptions="Center" HorizontalOptions="Center">
+                            <Label Text="Aiden Walker" Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1"
+                                FontAttributes="Bold" FontSize="40" TextColor="White" Margin="0,10"
+                                VerticalOptions="Center" HorizontalOptions="Center"/>
+                            <BoxView Color="#ffb74a" HeightRequest="2" HorizontalOptions="Fill"/>
+                        </VerticalStackLayout>
+                        <Frame Margin="10" BorderColor="Black" CornerRadius="200" BackgroundColor="#ffb74a"
+                            HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" IsClippedToBounds="True">
+                            <Image Source="aiden.png"  Aspect="Fill" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Frame>
+                    </HorizontalStackLayout>
+                    <Label Text="Aiden es un chico que ama el boxeo, es cariñoso y empático, apoya de manera humana, fortalecedora y constante a Mara."
+                        TextColor="White" Margin="0,10" Padding="40" HorizontalOptions="Center"/>
+                    <Label Text="-Que una mala experiencia no marque como vives tú vida."
+                        TextColor="White" FontAttributes="Bold" HorizontalOptions="End" Margin="20,10" Padding="20"/>
+                </VerticalStackLayout>
+            </Frame>
+            <HorizontalStackLayout Margin="50,0">
+                <ImageButton Source="gusto.png" Clicked="meGusta1" BorderColor="#e83414" BackgroundColor="Black"
+                    HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" HeightRequest="100" Margin="20,10,0,10"/>
+                <ImageButton Source="disgusto.png" Clicked="noGusta1" BorderColor="#e83414" BackgroundColor="Black"
+                    WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" VerticalOptions="Center" Margin="20,10"/>
+                <Label Text="  Te gustó este personaje?" x:Name="txtOpinion1" TextColor="White" FontAttributes="Bold" FontSize="20"
+                    HorizontalOptions="End" VerticalOptions="Center"
+                    Margin="20,10" />
+            </HorizontalStackLayout>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
