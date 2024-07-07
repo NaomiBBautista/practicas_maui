@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_2P_PR03.MainPage"
+             BarBackgroundColor="#f7f2f8"
+             BarTextColor="#02234c"
+             UnselectedTabColor="#ff4121"
+             SelectedTabColor="#ff4121">
+    <!-- Colores
+        Blanco: #f7f2f8
+        Naranja: #ff4121
+        Amarillo: #ff9a0a 
+        Rojo: #922d3b
+        Azul Claro: #17b3d9
+        Azul Fuerte: #02234c
+        Cambiar NavigationPage, Page-->
+
+    <!--PÁGINA BIENVENIDA-->
+    <ContentPage Title="INICIO" IconImageSource="inicio.png" BackgroundColor="#f7f2f8">
+        <VerticalStackLayout>
+            <Frame BorderColor="#ff4121" CornerRadius="50" BackgroundColor="#f7f2f8" Margin="40">
+                <StackLayout Margin="30">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/> <RowDefinition/> <RowDefinition/> <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Frame Grid.Row="1"
+                            Margin="10" BorderColor="#f7f2f8" CornerRadius="300" BackgroundColor="#f7f2f8"
+                            HeightRequest="400" WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center" 
+                            IsClippedToBounds="True">
+                            <Image Source="hobbies2.png" Aspect="Fill" HorizontalOptions="Start" VerticalOptions="Start"/>
+                        </Frame>
+                        <BoxView Grid.Row="2" Color="#ff4121" HeightRequest="2" HorizontalOptions="Fill" VerticalOptions="Start" Margin="10"/>
+                        <Label Grid.Row="2" Text="HOBBIES" TextColor="#ff4121" FontAttributes="Bold" FontFamily="Mitta" FontSize="80"
+                            Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1"
+                            Padding="40" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ContentPage>
+
+    <!--PÁGINA HOBBIES-->
+    <ContentPage Title="HOBBIES" IconImageSource="asperger.png" BackgroundColor="#f7f2f8">
+        <ScrollView>
+            <VerticalStackLayout>
+                <Frame BorderColor="#ff4121" CornerRadius="50" BackgroundColor="#f7f2f8" Margin="40,10">
+                    <StackLayout Margin="5">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/> <RowDefinition/> <RowDefinition/> <RowDefinition/> <RowDefinition/> <RowDefinition/> 
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/> <ColumnDefinition Width="2*"/> <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- NOMBRE -->
+                            <Label Grid.Row="0" Grid.Column="1" x:Name="txtNombre"
+                                Text="Nombre" TextColor="#ff4121" FontAttributes="Bold" FontFamily="Mitta" FontSize="80"
+                                Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1"
+                                HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <BoxView Grid.Row="0" Grid.Column="1" Color="#ff4121" 
+                                HeightRequest="2" HorizontalOptions="Fill" VerticalOptions="End" Margin="10"/>
+
+                            <!-- TÍTULOS -->
+                            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                                Text="HOBBIES" TextColor="#02234c" FontAttributes="Bold" FontFamily="ComicBold" FontSize="30"
+                                Padding="10,10,10,0" HorizontalOptions="Start" VerticalOptions="Start"/>
+
+                            <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"
+                                Text="NIVEL" TextColor="#02234c" FontAttributes="Bold" FontFamily="ComicBold" FontSize="30"
+                                Padding="10,10,10,0" HorizontalOptions="Start" VerticalOptions="Start"/>
+
+                            <!-- HOBBIES -->
+                            <VerticalStackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,20" HorizontalOptions="Start">
+                                <!-- Hobbie 1 -->
+                                <HorizontalStackLayout>
+                                    <Image Source="tejer.png" Aspect="Fill" HorizontalOptions="Start" VerticalOptions="Start"
+                                        HeightRequest="50" WidthRequest="50" Margin="3"/>
+                                    <Label  Text="Tejer/Costura" TextColor="#02234c" FontFamily="ComicLight" FontSize="20"
+                                        Padding="20,0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+
+                                <!-- Hobbie 2 -->
+                                <HorizontalStackLayout>
+                                    <Image Source="libro.png" Aspect="Fill" HorizontalOptions="Start" VerticalOptions="Start"
+                                        HeightRequest="50" WidthRequest="50" Margin="3"/>
+                                    <Label  Text="Leer" TextColor="#02234c" FontFamily="ComicLight" FontSize="20"
+                                        Padding="20,0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+
+                                <!-- Hobbie 3 -->
+                                <HorizontalStackLayout>
+                                    <Image Source="guante.png" Aspect="Fill" HorizontalOptions="Start" VerticalOptions="Start"
+                                        HeightRequest="50" WidthRequest="50" Margin="3"/>
+                                    <Label  Text="Entrenar Box" TextColor="#02234c" FontFamily="ComicLight" FontSize="20"
+                                        Padding="20,0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                            
+                            <!-- NIVELES -->
+                            <VerticalStackLayout Grid.Row="4" Grid.ColumnSpan="3" Margin="0,20" HorizontalOptions="Center">
+                                <HorizontalStackLayout Margin="50,10">
+                                    <Slider  x:Name="sldH1" Minimum="1" Maximum="10" Value="8" ValueChanged="OnSliderChange1"
+                                        WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center"
+                                        ThumbColor="#17b3d9" MinimumTrackColor="#17b3d9" MaximumTrackColor="#02234c"/>
+                                    <Label Text=" 8 " x:Name="txtH1" TextColor="#02234c" FontFamily="ComicBold" 
+                                        FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Padding="40,0"/>
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout Margin="50,10">
+                                    <Slider  x:Name="sldH2" Minimum="1" Maximum="10" Value="9" ValueChanged="OnSliderChange2"
+                                        WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center"
+                                        ThumbColor="#ff9a0a" MinimumTrackColor="#ff9a0a" MaximumTrackColor="#02234c"/>
+                                    <Label Text=" 9 " x:Name="txtH2" TextColor="#02234c" FontFamily="ComicBold" 
+                                        FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Padding="40,0"/>
+                                </HorizontalStackLayout>
+
+                                <HorizontalStackLayout Margin="50,10">
+                                    <Slider  x:Name="sldH3" Minimum="1" Maximum="10" Value="8" ValueChanged="OnSliderChange3"
+                                        WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center"
+                                        ThumbColor="#922d3b" MinimumTrackColor="#922d3b" MaximumTrackColor="#02234c"/>
+                                    <Label Text=" 8 " x:Name="txtH3" TextColor="#02234c" FontFamily="ComicBold" 
+                                        FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Padding="40,0"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+                <Entry Grid.Row="4" Grid.ColumnSpan="3" Margin="20,0" x:Name="txtNom"
+                    FontAttributes="Bold" FontFamily="ComicBold" FontSize="20" TextColor="#02234c" 
+                    BackgroundColor="#f7f2f8" WidthRequest="400" Placeholder="Ingrese su nombre" 
+                    PlaceholderColor="#8c8c8c" TextChanged="NameEntry_TextChanged"
+                    HorizontalOptions="Start" VerticalOptions="Center"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <!--PÁGINA HOBBIES 2-->
+    <ContentPage Title="HOBBIE" IconImageSource="megusta.png" BackgroundColor="#f7f2f8">
+        <ScrollView>
+            <VerticalStackLayout>
+                <Frame BorderColor="#ff4121" CornerRadius="50" BackgroundColor="#f7f2f8" Margin="40,10">
+                    <StackLayout Margin="5">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/> <RowDefinition Height="200"/> <RowDefinition Height="300"/> <RowDefinition Height="20"/> <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/> <ColumnDefinition/> <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- HOBBIE -->
+                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="txtHobbie"
+                                Text="Hobbie" TextColor="#ff4121" FontAttributes="Bold" FontFamily="Mitta" FontSize="80"
+                                Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1"
+                                HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Color="#ff4121" 
+                                HeightRequest="2" HorizontalOptions="Fill" VerticalOptions="End" Margin="10"/>
+                            
+                            <Switch Grid.Row="0" Grid.Column="2" IsToggled="false" Toggled="Switch_Toggled"
+                                OnColor="#17b3d9" ThumbColor="#02234c" x:Name="mySwitch" 
+                                VerticalOptions="Center" HorizontalOptions="End"/>
+
+                            <BoxView Grid.Row="1" Grid.Column="1" Color="#17b3d9" 
+                                HeightRequest="35" WidthRequest="70" HorizontalOptions="Center" VerticalOptions="End"/>
+                            <Stepper Grid.Row="1" Grid.Column="1" x:Name="stpCantidad" Minimum="1" Maximum="10" 
+                                Increment="1" ValueChanged="OnStepper" Background="#17b3d9" BackgroundColor="#17b3d9"
+                                HorizontalOptions="Center" VerticalOptions="End"/>
+                            
+                            <VerticalStackLayout Grid.Row="2" Grid.ColumnSpan="3" Margin="40,10">
+                                <Slider  x:Name="sldPuntuar" Minimum="1" Maximum="10" Value="0" ValueChanged="OnSlider"
+                                    WidthRequest="400" HorizontalOptions="Center" VerticalOptions="Center" IsEnabled="False"
+                                    ThumbColor="#17b3d9" MinimumTrackColor="#17b3d9" MaximumTrackColor="#02234c"/>
+                                <Label Text=" 0 " x:Name="txtPuntuar" TextColor="#02234c" FontFamily="ComicBold" 
+                                    FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Padding="40,0"/>
+                            </VerticalStackLayout>
+
+                            <Entry Grid.Row="4" Grid.ColumnSpan="3" x:Name="txtHob"
+                                FontAttributes="Bold" FontFamily="ComicBold" FontSize="20" TextColor="#02234c" 
+                                BackgroundColor="#f7f2f8" WidthRequest="400" Placeholder="Ingrese el nombre del hobbie" 
+                                PlaceholderColor="#8c8c8c" TextChanged="HobbieTextChanged"
+                                HorizontalOptions="Start" VerticalOptions="Center"/>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+</TabbedPage>
